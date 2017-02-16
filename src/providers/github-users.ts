@@ -12,13 +12,13 @@ import { User } from '../models/user';
 */
 @Injectable()
 export class GithubUsers {
-  githubApiUrl = 'https://api.github.com';
+  githubApiUrl = 'http://checkin-api.dev.cap-liberte.com';
 
   constructor(public http: Http) { }
 
   // Load all github users
   load(): Observable<User[]> {
-    return this.http.get(`${this.githubApiUrl}/users`)
+    return this.http.get(`${this.githubApiUrl}/checkin`)
       .map(res => <User[]>res.json());
   }
 }
