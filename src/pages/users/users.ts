@@ -1,20 +1,25 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 
-import { User } from '../../models/user';
+import { Checkin } from '../../models/user';
 
-import {  GithubUsers } from '../../providers/github-users';
+import { GithubUsers } from '../../providers/github-users';
+import { UserDetailsPage } from '../user-details/user-details';
 
 @Component({
   selector: 'page-users',
   templateUrl: 'users.html'
 })
 export class UsersPage {
-  users: User[]
+  checkin: Checkin[]
 
   constructor(public navCtrl: NavController, private githubUsers: GithubUsers) {
-    githubUsers.load().subscribe(users => {
-      this.users = users;
+    githubUsers.load().subscribe(checkin => {
+      this.checkin = checkin;
     })
+  }
+
+  goToDetails(id: number) {
+    this.navCtrl.push(UserDetailsPage, {id});
   }
 }

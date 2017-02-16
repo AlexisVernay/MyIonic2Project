@@ -3,7 +3,7 @@ import { Http } from '@angular/http';
 import { Observable } from 'rxjs/Rx';
 import 'rxjs/add/operator/map';
 
-import { User } from '../models/user';
+import { Checkin } from '../models/user';
 /*
   Generated class for the GithubUsers provider.
 
@@ -17,8 +17,8 @@ export class GithubUsers {
   constructor(public http: Http) { }
 
   // Load all github users
-  load(): Observable<User[]> {
+  load(): Observable<Checkin[]> {
     return this.http.get(`${this.githubApiUrl}/checkin`)
-      .map(res => <User[]>res.json());
+      .map(res => <Checkin[]>res.json());
   }
 }
