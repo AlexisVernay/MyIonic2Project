@@ -47,5 +47,15 @@
       "locator": "ios"
     }
   ],
-  "description": "MyIonic2Project: An Ionic project"
+  "description": "MyIonic2Project: An Ionic project",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlexisVernay/MyIonic2Project.git"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AlexisVernay/MyIonic2Project/issues"
+  }
 }

@@ -3,20 +3,20 @@ import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
 
 //page
-import { UsersPage } from '../pages/users/users';
+import { CheckinsPage } from '../pages/checkin/checkins';
 import { ReposPage } from '../pages/repos/repos';
 import { OrganisationsPage } from '../pages/organisations/organisations';
-import { UserDetailsPage } from '../pages/user-details/user-details';
+import { CheckinDetailsPage } from '../pages/checkin-details/checkin-details';
 
-import { GithubUsers } from '../providers/github-users';
+import { CheckinsAPI } from '../providers/checkin-api';
 
 @NgModule({
   declarations: [
     MyApp,
-    UsersPage,
+    CheckinsPage,
     ReposPage,
     OrganisationsPage,
-    UserDetailsPage
+    CheckinDetailsPage
   ],
   imports: [
     IonicModule.forRoot(MyApp)
@@ -24,11 +24,11 @@ import { GithubUsers } from '../providers/github-users';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    UsersPage,
+    CheckinsPage,
     ReposPage,
     OrganisationsPage,
-    UserDetailsPage
+    CheckinDetailsPage
   ],
-  providers: [GithubUsers]
+  providers: [CheckinsAPI]
 })
 export class AppModule {}
